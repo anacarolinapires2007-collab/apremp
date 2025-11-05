@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://iugn31wumkbm"]
+
+[ext_resource type="Script" uid="uid://3whevtwenbjp" path="res://area_2d.gd" id="1_1dtnr"]
+[ext_resource type="Texture2D" uid="uid://dormicoyya782" path="res://Assets/personagens/top downF/Imagem do WhatsApp de 2025-10-31 à(s) 08.11.31_2969984e.png" id="2_c33a7"]
+[ext_resource type="Texture2D" uid="uid://ct64b730n3qhf" path="res://Assets/personagens/top downF/Imagem do WhatsApp de 2025-10-31 à(s) 08.11.30_513958e7.png" id="3_oqxq1"]
+[ext_resource type="Texture2D" uid="uid://66tnlm1emc8s" path="res://Assets/personagens/top downF/Imagem do WhatsApp de 2025-10-31 à(s) 08.11.31_bbc4ca5c.png" id="4_l08u0"]
+[ext_resource type="Texture2D" uid="uid://it88mf275vmd" path="res://Assets/personagens/top downF/Imagem do WhatsApp de 2025-10-31 à(s) 08.11.30_876360ba.png" id="5_nrb8d"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nsakb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_c33a7")
+}],
+"loop": true,
+"name": &"baixo",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_oqxq1")
+}],
+"loop": true,
+"name": &"cima",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_l08u0")
+}],
+"loop": true,
+"name": &"direita",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_nrb8d")
+}],
+"loop": true,
+"name": &"esquerda",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u0hmu"]
+size = Vector2(43, 102)
+
+[node name="Area2D" type="Area2D"]
+collision_mask = 0
+script = ExtResource("1_1dtnr")
+
+[node name="animacao" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_nsakb")
+animation = &"esquerda"
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(-2.5, 2)
+shape = SubResource("RectangleShape2D_u0hmu")

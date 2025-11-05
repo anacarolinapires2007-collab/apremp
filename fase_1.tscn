@@ -1,0 +1,62 @@
+[gd_scene load_steps=11 format=3 uid="uid://dkkei5huo5ii8"]
+
+[ext_resource type="Texture2D" uid="uid://dttatwn01p5nu" path="res://Assets/cenarios/paisagem/Captura de tela 2025-11-05 173449.png" id="1_8t630"]
+[ext_resource type="PackedScene" uid="uid://iugn31wumkbm" path="res://area_2d.tscn" id="1_ru54l"]
+[ext_resource type="Texture2D" uid="uid://bgc7gvsr5bnsx" path="res://Assets/Extras/cabana.F/Imagem do WhatsApp de 2025-11-04 à(s) 20.01.35_00eeb85a.png" id="3_h75nb"]
+[ext_resource type="Texture2D" uid="uid://b1krcrrdve3d6" path="res://Assets/Extras/cabana.F/Imagem do WhatsApp de 2025-11-04 à(s) 20.02.02_9ac105d1.png" id="4_o2fxn"]
+[ext_resource type="Texture2D" uid="uid://bilnxk601oyt1" path="res://Assets/Extras/cabana.F/Imagem do WhatsApp de 2025-11-04 à(s) 20.02.02_20de89cc.png" id="5_xp7xs"]
+[ext_resource type="Texture2D" uid="uid://botyplcxqasht" path="res://Assets/Extras/cabana.F/Imagem do WhatsApp de 2025-11-04 à(s) 20.02.02_0bdbc657.png" id="6_wqmjn"]
+[ext_resource type="Texture2D" uid="uid://saq6nbf0rsi8" path="res://Assets/Extras/cabana.F/Imagem do WhatsApp de 2025-11-04 à(s) 20.02.03_50761050.png" id="7_rwqh0"]
+[ext_resource type="Texture2D" uid="uid://c6mi3qrun8lfb" path="res://Assets/Extras/cabana.F/Imagem do WhatsApp de 2025-11-04 à(s) 20.02.02_a7f82f55.png" id="8_3yev8"]
+[ext_resource type="Texture2D" uid="uid://csrlyij7x2byk" path="res://Assets/Extras/cabana.F/Imagem do WhatsApp de 2025-11-04 à(s) 20.02.02_362573b8.png" id="9_sdo6p"]
+[ext_resource type="Texture2D" uid="uid://cvm0dn3h7h3fv" path="res://Assets/Extras/cabana.F/Imagem do WhatsApp de 2025-11-04 à(s) 20.02.10_35b76953.png" id="10_nlani"]
+
+[node name="fase1" type="Node"]
+
+[node name="fundo" type="Sprite2D" parent="."]
+position = Vector2(649, 363)
+scale = Vector2(1.41234, 1.46332)
+texture = ExtResource("1_8t630")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(505, 474)
+scale = Vector2(0.723689, 0.696714)
+texture = ExtResource("3_h75nb")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(372, 260)
+scale = Vector2(0.699072, 0.754699)
+texture = ExtResource("4_o2fxn")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(146, 301)
+scale = Vector2(0.358916, 0.349408)
+texture = ExtResource("5_xp7xs")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(216.244, 556.16)
+scale = Vector2(0.280096, 0.28313)
+texture = ExtResource("6_wqmjn")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(727.414, 195.973)
+scale = Vector2(0.309672, 0.316874)
+texture = ExtResource("7_rwqh0")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(1051, 455)
+scale = Vector2(0.390669, 0.464285)
+texture = ExtResource("8_3yev8")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(1021, 250)
+scale = Vector2(0.617977, 0.728346)
+texture = ExtResource("9_sdo6p")
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(813, 444)
+scale = Vector2(0.611632, 0.680265)
+texture = ExtResource("10_nlani")
+
+[node name="Area2D" parent="." instance=ExtResource("1_ru54l")]
+position = Vector2(1237, 382)

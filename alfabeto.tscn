@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://y8hkaia2achf"]
+
+[node name="alfabeto" type="Node"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.75, 2.75)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
