@@ -1,0 +1,13 @@
+Camera2D
+TileMapLayer
+CollisionShape2D
+Sprite2D
+Timer
+Area2D
+Label
+Node
+CanvasLayer
+AnimatedSprite2D
+TextureRect
+StaticBody2D
+CharacterBody2D
