@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://y8hkaia2achf"]
+[gd_scene load_steps=2 format=3 uid="uid://y8hkaia2achf"]
+
+[ext_resource type="Texture2D" uid="uid://dttatwn01p5nu" path="res://Assets/cenarios/paisagem/Captura de tela 2025-11-05 173449.png" id="1_pl552"]
 
 [node name="alfabeto" type="Node"]
 
@@ -8,3 +10,6 @@
 zoom = Vector2(2.75, 2.75)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.99999, 0)
+scale = Vector2(0.504329, 0.509652)
+texture = ExtResource("1_pl552")

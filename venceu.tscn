@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwwo67jhsc7oq"]
+
+[ext_resource type="Script" uid="uid://0y3v2xtfhkm5" path="res://venceu.gd" id="1_ruay7"]
+[ext_resource type="Texture2D" uid="uid://bf0lpv5udh2t0" path="res://Assets/telas/game-over-1.webp" id="2_oyfh6"]
+[ext_resource type="FontFile" uid="uid://dm3ch1vmt4ixr" path="res://Assets Super Mario Bros/Assets Super Mario Bros/Fonts/font.ttf" id="3_ajd2a"]
+
+[node name="venceu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ruay7")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1281.0
+offset_bottom = 724.0
+texture = ExtResource("2_oyfh6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="play" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "play"
+
+[node name="quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_ajd2a")
+theme_override_font_sizes/font_size = 32
+text = "quit"

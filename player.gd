@@ -32,3 +32,16 @@ func _physics_process(delta):
 	$AnimatedSprite2D._trigger_animation(velocity, direction)
 	
 	move_and_slide()
+	
+	func _die():
+	if is_dead:
+		return
+		   
+	is_dead = true
+		
+	
+func _reset_state():
+	is_dead = false
+	velocity = Vector2.ZERO
+	set_physics_process(true)
+	$animacao.play("julia_idle")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bh84t2r38c5ap"
-path="res://.godot/imported/Captura de tela 2025-11-05 170926.png-bb8326f88a95dc633ce970d9df11b521.ctex"
+uid="uid://gukava4k0xm1"
+path="res://.godot/imported/IMG-20251031-WA0016.png-e975a14e37c63686cb1f8ac97219459f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/cenarios/grama/Captura de tela 2025-11-05 170926.png"
-dest_files=["res://.godot/imported/Captura de tela 2025-11-05 170926.png-bb8326f88a95dc633ce970d9df11b521.ctex"]
+source_file="res://Assets/cenarios/Árvores/arvores.F/IMG-20251031-WA0016.png"
+dest_files=["res://.godot/imported/IMG-20251031-WA0016.png-e975a14e37c63686cb1f8ac97219459f.ctex"]
 
 [params]
 

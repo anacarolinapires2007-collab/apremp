@@ -1,5 +1,6 @@
-[gd_scene load_steps=22 format=4 uid="uid://ynhnjvnh107d"]
+[gd_scene load_steps=23 format=4 uid="uid://ynhnjvnh107d"]
 
+[ext_resource type="Script" uid="uid://woq76bao4c3l" path="res://main.gd" id="1_efxa6"]
 [ext_resource type="Texture2D" uid="uid://c5w6w5ivf0jcu" path="res://Assets/cenarios/paisagem/160588935-três-portas-fechadas-na-sala-3d-ilustração.jpg" id="1_kek77"]
 [ext_resource type="Texture2D" uid="uid://bh2i2pbd72n30" path="res://Assets Super Mario Bros/Assets Super Mario Bros/Sprites/GroundBlock.png" id="1_lquwl"]
 [ext_resource type="Texture2D" uid="uid://co3bdq1m4vg4f" path="res://Assets Super Mario Bros/Assets Super Mario Bros/Sprites/Brick.png" id="2_7mycd"]
@@ -68,6 +69,7 @@ size = Vector2(109, 243)
 size = Vector2(113, 240)
 
 [node name="main" type="Node"]
+script = ExtResource("1_efxa6")
 
 [node name="Sprite2D5" type="Sprite2D" parent="."]
 position = Vector2(-0.499985, 25.5)
