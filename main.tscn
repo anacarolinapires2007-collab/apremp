@@ -1,16 +1,22 @@
-[gd_scene load_steps=23 format=4 uid="uid://ynhnjvnh107d"]
+[gd_scene load_steps=26 format=4 uid="uid://ynhnjvnh107d"]
 
 [ext_resource type="Script" uid="uid://woq76bao4c3l" path="res://main.gd" id="1_efxa6"]
 [ext_resource type="Texture2D" uid="uid://c5w6w5ivf0jcu" path="res://Assets/cenarios/paisagem/160588935-três-portas-fechadas-na-sala-3d-ilustração.jpg" id="1_kek77"]
 [ext_resource type="Texture2D" uid="uid://bh2i2pbd72n30" path="res://Assets Super Mario Bros/Assets Super Mario Bros/Sprites/GroundBlock.png" id="1_lquwl"]
 [ext_resource type="Texture2D" uid="uid://co3bdq1m4vg4f" path="res://Assets Super Mario Bros/Assets Super Mario Bros/Sprites/Brick.png" id="2_7mycd"]
 [ext_resource type="Texture2D" uid="uid://8as4lix1a8pr" path="res://Assets Super Mario Bros/Assets Super Mario Bros/Sprites/HardBlock.png" id="3_272bh"]
+[ext_resource type="Script" uid="uid://bbtevpa822ajp" path="res://porta1.gd" id="3_dg77c"]
 [ext_resource type="Texture2D" uid="uid://dbhkvad8kmca" path="res://Assets Super Mario Bros/Assets Super Mario Bros/Sprites/UndergroundBlock.png" id="4_5vw27"]
 [ext_resource type="Texture2D" uid="uid://dtkrgfs1x5qrr" path="res://Assets Super Mario Bros/Assets Super Mario Bros/Sprites/UndergroundBrick.png" id="5_kek77"]
 [ext_resource type="PackedScene" uid="uid://i45ovon0th07" path="res://player.tscn" id="6_7mycd"]
 [ext_resource type="Texture2D" uid="uid://dxstf3eeggcla" path="res://Assets Super Mario Bros/Assets Super Mario Bros/Sprites/EmptyBlock.png" id="7_efxa6"]
 [ext_resource type="Texture2D" uid="uid://b5sqfy41h20ks" path="res://Assets Super Mario Bros/Assets Super Mario Bros/Sprites/PipeTop.png" id="8_dg77c"]
 [ext_resource type="Texture2D" uid="uid://byuqqkpflap7y" path="res://Assets/cenarios/paisagem/Captura de tela 2025-11-06 161741.png" id="10_4c57u"]
+[ext_resource type="Script" uid="uid://bvpby0wm4qveb" path="res://porta_2.gd" id="13_ycdy4"]
+[ext_resource type="Script" uid="uid://b4m1ikhjdsun6" path="res://porta_3.gd" id="14_w48qg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ycdy4"]
+size = Vector2(111.5, 241.5)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4c57u"]
 texture = ExtResource("1_lquwl")
@@ -59,9 +65,6 @@ sources/4 = SubResource("TileSetAtlasSource_w48qg")
 sources/5 = SubResource("TileSetAtlasSource_vivmo")
 sources/6 = SubResource("TileSetAtlasSource_2cqfq")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4c57u"]
-size = Vector2(113, 242.5)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_efxa6"]
 size = Vector2(109, 243)
 
@@ -70,6 +73,20 @@ size = Vector2(113, 240)
 
 [node name="main" type="Node"]
 script = ExtResource("1_efxa6")
+
+[node name="Porta1" type="Area2D" parent="."]
+position = Vector2(-0.499985, 25.5)
+scale = Vector2(1.42889, 1.46975)
+script = ExtResource("3_dg77c")
+
+[node name="porta1" type="CollisionShape2D" parent="Porta1"]
+position = Vector2(-140.144, 7.99456)
+scale = Vector2(0.699844, 0.680388)
+shape = SubResource("RectangleShape2D_ycdy4")
+
+[node name="Label" type="Label" parent="Porta1"]
+offset_right = 40.0
+offset_bottom = 23.0
 
 [node name="Sprite2D5" type="Sprite2D" parent="."]
 position = Vector2(-0.499985, 25.5)
@@ -91,14 +108,37 @@ position = Vector2(17, 190)
 scale = Vector2(1.04462, 0.783019)
 texture = ExtResource("10_4c57u")
 
-[node name="portav" type="CollisionShape2D" parent="."]
-position = Vector2(-200.5, 40.25)
-shape = SubResource("RectangleShape2D_4c57u")
+[node name="Porta2" type="Area2D" parent="."]
+position = Vector2(-0.499985, 25.5)
+scale = Vector2(1.42889, 1.46975)
+script = ExtResource("13_ycdy4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 40)
+[node name="porta2" type="CollisionShape2D" parent="Porta2"]
+position = Vector2(1.04976, 7.82446)
+scale = Vector2(0.699844, 0.680388)
 shape = SubResource("RectangleShape2D_efxa6")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(202.5, 39)
+[node name="Label" type="Label" parent="Porta2"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Porta3" type="Area2D" parent="."]
+position = Vector2(-0.499987, 25.5)
+scale = Vector2(1.42889, 1.46975)
+script = ExtResource("14_w48qg")
+
+[node name="porta3" type="CollisionShape2D" parent="Porta3"]
+position = Vector2(142.068, 9.18524)
+scale = Vector2(0.699844, 0.680388)
 shape = SubResource("RectangleShape2D_dg77c")
+
+[node name="Label" type="Label" parent="Porta3"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="body_entered" from="Porta1" to="Porta1" method="_on_body_entered"]
+[connection signal="body_exited" from="Porta1" to="Porta1" method="_on_body_exited"]
+[connection signal="body_entered" from="Porta2" to="Porta2" method="_on_body_entered"]
+[connection signal="body_exited" from="Porta2" to="Porta2" method="_on_body_exited"]
+[connection signal="body_entered" from="Porta3" to="Porta3" method="_on_body_entered"]
+[connection signal="body_exited" from="Porta3" to="Porta3" method="_on_body_exited"]
