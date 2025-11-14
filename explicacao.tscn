@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://djqokainfmkdl"]
+[gd_scene load_steps=3 format=3 uid="uid://djqokainfmkdl"]
 
 [ext_resource type="Script" uid="uid://kbm55rm2kk75" path="res://explicacao.gd" id="1_kfs15"]
+[ext_resource type="Texture2D" uid="uid://chans6tfturrr" path="res://Assets/telas/images (1).jpg" id="2_8nvvj"]
 
 [node name="explicacao" type="Control"]
 layout_mode = 3
@@ -11,20 +12,47 @@ script = ExtResource("1_kfs15")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1284.0
+offset_bottom = 724.0
+texture = ExtResource("2_8nvvj")
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 1
+offset_left = -2564.0
+offset_top = 189.0
+offset_right = 3830.0
+offset_bottom = 866.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 29
+text = "Como funciona:
+Você vai ver três portas na sua frente.
+Em cima delas aparece uma pergunta de matemática, como uma conta de
+ somar, subtrair, multiplicar ou dividir.
+Cada porta tem uma resposta diferente.
+Mas cuidado: só uma delas está certa!
+O que você precisa fazer:
+Você deve ir até a porta que tem a resposta correta da pergunta.
+Se escolher a porta certa, você passa para o próximo desafio."
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 410.0
+offset_top = 29.0
+offset_right = 894.0
+offset_bottom = 125.0
+theme_override_colors/font_color = Color(0.038397167, 0.038397167, 0.03839716, 1)
+theme_override_font_sizes/font_size = 70
+text = "Jogo da portas"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="play" type="Button" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 596.0
+offset_top = 622.0
+offset_right = 725.0
+offset_bottom = 713.0
+theme_override_font_sizes/font_size = 60
+text = "Play
+"
 
-[node name="play" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-
-[connection signal="pressed" from="VBoxContainer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]

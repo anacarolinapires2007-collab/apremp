@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://ch5o1ctmryyan"]
+
+[ext_resource type="Texture2D" uid="uid://chans6tfturrr" path="res://Assets/telas/images (1).jpg" id="1_hhnca"]
+[ext_resource type="Script" uid="uid://0qbxlt5xoxd3" path="res://explicacao_2.gd" id="1_myl8v"]
+
+[node name="explicacao2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_myl8v")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1276.0
+offset_bottom = 719.0
+texture = ExtResource("1_hhnca")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -17.0
+offset_top = 207.0
+offset_right = 1292.0
+offset_bottom = 575.0
+theme_override_colors/font_color = Color(0.04755766, 0.047557645, 0.047557645, 1)
+theme_override_font_sizes/font_size = 34
+text = "O festival começou!
+Mas muitos dos comerciantes e pessoas estão precisando de ajuda.
+Ajude-os com os seus problemas para conseguir seguir a sua viajem.
+Em cada cabana terá problemas de matemática onde você precisa resolver.
+\"W\" Interagir com os habitantes
+\"A\" - andar para esquerda
+\"D\" - andar para direita"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 17.0
+offset_right = 881.0
+offset_bottom = 212.0
+theme_override_colors/font_color = Color(0.103743516, 0.10374353, 0.103743516, 1)
+theme_override_font_sizes/font_size = 70
+text = "Jogo do festival
+"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 595.0
+offset_top = 599.0
+offset_right = 724.0
+offset_bottom = 690.0
+theme_override_font_sizes/font_size = 60
+text = "Play
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
